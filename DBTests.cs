@@ -33,8 +33,8 @@ namespace Tests
                 var cities = db.Cities.ToList();
                 var logs = new List<City>();
                 
-                CsvHandler<City>.CsvEx(cities,"/Users/vladimir/Desktop/test.csv");
-                var records = CsvHandler<City>.ReadCsv("/Users/vladimir/Desktop/expected result.csv");
+                CsvHandler<City>.CsvEx(cities,"/Users/mykhailo/Desktop/test.csv");
+                var records = CsvHandler<City>.ReadCsv("/Users/mykhailo/Desktop/expected result.csv");
                 for (int i = 0; i < cities.Count; i++)
                 {
                     if (cities[i].Location !=records[i].Location || cities[i].Name !=records[i].Name)
@@ -42,7 +42,7 @@ namespace Tests
                         logs.Add(cities[i]);
                     }
                 }
-                CsvHandler<City>.CsvEx(logs,"/Users/vladimir/Desktop/log.csv");
+                CsvHandler<City>.CsvEx(logs,"/Users/mykhailo/Desktop/log.csv");
                 Assert.Empty(logs);
             }
         }
@@ -56,8 +56,8 @@ namespace Tests
                 var cities = db.Cities.ToList();
                 var logs = new List<City>();
                 
-                CsvHandler<City>.CsvEx(cities,"/Users/vladimir/Desktop/test.csv");
-                var records = CsvHandler<City>.ReadCsv("/Users/vladimir/Desktop/expected result 2.csv");
+                CsvHandler<City>.CsvEx(cities,"/Users/mykhailo/Desktop/test.csv");
+                var records = CsvHandler<City>.ReadCsv("/Users/mykhailo/Desktop/expected result 2.csv");
                 for (int i = 0; i < cities.Count; i++)
                 {
                     if (cities[i].Location !=records[i].Location || cities[i].Name !=records[i].Name)
@@ -65,7 +65,7 @@ namespace Tests
                         logs.Add(cities[i]);
                     }
                 }
-                CsvHandler<City>.CsvEx(logs,"/Users/vladimir/Desktop/log 2.csv");
+                CsvHandler<City>.CsvEx(logs,"/Users/mykhailo/Desktop/log 2.csv");
                 Assert.Empty(logs);
             }
         }
